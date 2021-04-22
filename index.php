@@ -11,11 +11,14 @@
     <?php
         $text = 'Questo testo contiene parolacce, come: php, mamp, variabile d\'ambiente';
         $badword = $_GET['badword'];
-        $text = str_replace($badword,'***',$text);
+        $newText = str_replace($badword,'***',$text);
     ?>
 
     <h3>Il testo seguente ha lunghezza <?php echo strlen($text); ?> caratteri</h3>
     <p><?php echo $text; ?></p>
+
+    <h3>Il testo seguente (nuovo) ha lunghezza <?php echo strlen($newText); ?> caratteri</h3>
+    <p><?php echo $newText; ?></p>
 
 </body>
 </html>
